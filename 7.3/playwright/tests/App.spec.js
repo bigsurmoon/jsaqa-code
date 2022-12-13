@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 const { email, password } = require("./user.js");
 
-test("successfulAuthorization", async ({ page }) => {
+test("Succsessful Authorization", async ({ page }) => {
   test.setTimeout(120000);
   await page.goto("https://netology.ru/?modal=sign_in");
   await page.locator('[placeholder="Email"]').click();
@@ -14,7 +14,7 @@ test("successfulAuthorization", async ({ page }) => {
   expect(page.locator("text=Мои курсы и профессии").isVisible);
 });
 
-test("unsuccessfulAuthorization", async ({ page }) => {
+test("Unsuccsessful Authorization", async ({ page }) => {
   test.setTimeout(120000);
   await page.goto("https://netology.ru/?modal=sign_in");
   await page.locator('[placeholder="Email"]').click();
